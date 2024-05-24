@@ -1,0 +1,30 @@
+:root {
+    --palette-1: #5c9ead;
+    --palette-2: #ffffff;
+    --palette-3: #326273;
+    --palette-4: #EEEEEE;
+    --palette-5: #dc8055;
+
+    --palette-btn-done: rgb(0, 124, 0);
+    --palette-btn-new: rgb(243, 126, 10);
+
+}
+
+body, html {
+
+    height: 100%;
+    background-color: var(--palette-1) !important;
+}
+
+.comfortaa {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+

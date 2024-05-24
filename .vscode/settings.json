@@ -1,0 +1,3 @@
+{
+    "css.styleSheets": ["todo_app/static/todo_app/*.css"]
+  }

@@ -1,0 +1,37 @@
+{% extends "todo_app/layouts/layout.html" %}
+
+{% block title %}
+    Add New Task:
+{% endblock %}
+
+{% block content %}
+
+    <div class="content-list">
+        <form method="POST">
+        {% csrf_token %}
+            <div class="form-input-flex">
+                <div class="form-input-option">
+                    Title
+                    <input type="text" name="title" placeholder="Do the laundry."/>
+                </div>
+                <div class="form-input-option">
+                    Priority
+                    <input type="checkbox" name="priority" value="false"/>
+                </div>
+
+                <div class="form-input-option">
+                    Details
+                    <textarea rows="3"></textarea>
+                </div>
+
+            </div>
+            <div class="btn-to-right-side">
+                <button class="list-item-btn btn-add-new">Add Task</button>
+
+                <a class="list-item-btn btn-add-new" href="{% url 'home' %}">Cancel</a>
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}
