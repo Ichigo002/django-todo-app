@@ -34,10 +34,17 @@ footer {
 
     padding: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 
     border-radius: 6px;
     background-color: var(--palette-4);
+
+    transition: filter 0.2s ease-out;
+    filter: brightness(100%);
+}
+
+.list-item:hover {
+    filter: brightness(95%);
 }
 
 .list-item-text {
