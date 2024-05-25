@@ -12,3 +12,5 @@ Python Version: 3.11.9
 5. [Optional] Run in terminal `python manage.py livereload`. It allows to refresh webapp in real time
 6. Run in other terminal `python manage.py runserver`
 7. Your app should be at the default address: http://127.0.0.1:8000/
+
+Everything under MIT License
