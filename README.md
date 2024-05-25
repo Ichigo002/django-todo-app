@@ -4,6 +4,9 @@ It is my first project (not including tutorial) which I made as good learning ex
 
 ### How to start working on it?
  <ol>
-    <li>Clone from github on your local machine</li>
+    <li>Clone repository from github on your local machine</li>
+    <li>Activate python environment</li>
+    <li>Install all requirements using ```pip install```</li>
+    <li></li>
     <li></li>
  </ol>
