@@ -6,7 +6,7 @@ It is my first project (not including tutorial) which I made as good learning ex
  <ol>
     <li>Clone repository from github on your local machine</li>
     <li>Activate python environment</li>
-    <li>Install all requirements using ```pip install```</li>
+    <li>Install all requirements using </li>
     <li></li>
     <li></li>
  </ol>
