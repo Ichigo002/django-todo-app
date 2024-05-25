@@ -6,10 +6,18 @@ from django.utils import timezone
 
 # Create your views here.
 def home(request):
+
+    if request.method == "POST":
+        tid = request.POST["task_id"]
+        found_record = TodoTask.objects.get(pk = tid) # 'pk' stands for 'primary key'
+        found_record.delete()
+
+
     tasks = TodoTask.objects.filter(is_done=False).order_by('id')
 
     context = {
-        'tasks' : tasks
+        'tasks' : tasks,
+        'is_empty' : tasks.count() <= 0
     }
 
     return render(request, "todo_app/main_page.html", context)
