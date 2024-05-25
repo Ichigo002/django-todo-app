@@ -8,29 +8,22 @@
 
     <div class="content-list">
         <form method="POST">
-        {% csrf_token %}
+            {% csrf_token %}
             <div class="form-input-flex">
-                <div class="form-input-option">
-                    Title
-                    <input type="text" name="title" placeholder="Do the laundry."/>
+                {% for field in form.visible_fields %}
+                    <div class="form-input-option">
+                        {{ field.label_tag }}
+                        {{ field }} 
+                    </div>
                 </div>
-                <div class="form-input-option">
-                    Priority
-                    <input type="checkbox" name="priority" value="false"/>
-                </div>
-
-                <div class="form-input-option">
-                    Details
-                    <textarea rows="3"></textarea>
-                </div>
-
+                {% endfor %}
             </div>
             <div class="btn-to-right-side">
                 <button class="list-item-btn btn-add-new">Add Task</button>
 
                 <a class="list-item-btn btn-add-new" href="{% url 'home' %}">Cancel</a>
             </div>
-        </form>
+            </form>
 
     </div>
 
