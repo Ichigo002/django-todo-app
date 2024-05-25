@@ -34,10 +34,17 @@ footer {
 
     padding: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 
     border-radius: 6px;
     background-color: var(--palette-4);
+
+    transition: filter 0.2s ease-out;
+    filter: brightness(100%);
+}
+
+.list-item:hover {
+    filter: brightness(90%);
 }
 
 .list-item-text {
@@ -60,6 +67,10 @@ footer {
 
 .list-item-btn:hover {
     filter: brightness(120%)
+}
+
+.list-item-priority {
+    background-color: var(--palette-priority);
 }
 
 .btn-add-new {
@@ -104,4 +115,12 @@ footer {
     outline: none;
     padding: 6px;
     color: #3c3c3c;
+}
+
+.detail-strong {
+    text-decoration: underline;
+}
+
+.limited-p {
+    max-width: 350px;
 }

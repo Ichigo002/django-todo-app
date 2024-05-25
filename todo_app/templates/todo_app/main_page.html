@@ -7,21 +7,25 @@
 {% block content %}
 
     <div class="content-list">
-        <div class="list-item">
-            <div>Make dinner lorem ipsum dolor</div>
-            <form method="POST">
-                {% csrf_token %}
-                <button class="list-item-btn" type="submit">Done</button>
-            </form>
-        </div>
+        {% if is_empty %}
+            You don't have any tasks to do! 🥳
+        {% endif %}
 
-        <div class="list-item">
-            <div class="list-item-text">Make dinner loremf gsdf  g sdf  gdfs  gsdfgdfsgsdg dsfg sdfgsd</div>
-            <form method="POST">
-                {% csrf_token %}
-                <button class="list-item-btn" type="submit">Done</button>
-            </form>
-        </div>
+        {% for task in tasks %}
+
+        <a href="{% url 'details' task.id %}" class="list-item-a" style="text-decoration: none; color: black;">
+            <div class="list-item {% if task.is_priority %} list-item-priority {% endif %}">
+                <div class="list-item-text">{{ task.title }}</div>
+                <form method="POST" action="{% url 'home' %}">
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ task.id }}" name="task_id"/>
+                    <button class="list-item-btn" type="submit">Done</button>
+                </form>
+            </div>
+        </a>
+
+        {% endfor %}
+
         <div class="btn-to-right-side">
             <a class="list-item-btn btn-add-new" href="{% url 'new-task-form' %}">New Task</a>
         </div>

@@ -5,14 +5,17 @@
     --palette-4: #EEEEEE;
     --palette-5: #dc8055;
 
+    --palette-priority: #ff9393;
+
     --palette-btn-done: rgb(0, 124, 0);
     --palette-btn-new: rgb(243, 126, 10);
 
 }
-
+ 
 body, html {
 
     height: 100%;
+    overflow-y: auto;
     background-color: var(--palette-1) !important;
 }
 
