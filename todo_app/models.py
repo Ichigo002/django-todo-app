@@ -4,6 +4,7 @@ from django.utils import timezone
 # Create your models here.
 class TodoTask(models.Model):
     created_at = models.DateTimeField("Created at")
+    is_done = models.BooleanField("Is Done Task", default=False)
     title = models.CharField("Title", max_length=500)
     is_priority = models.BooleanField("Is Priority", default=False)
     details = models.TextField("Details")

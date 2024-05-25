@@ -9,10 +9,11 @@
     --palette-btn-new: rgb(243, 126, 10);
 
 }
-
+ 
 body, html {
 
     height: 100%;
+    overflow-y: auto;
     background-color: var(--palette-1) !important;
 }
 

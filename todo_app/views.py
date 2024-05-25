@@ -6,7 +6,16 @@ from django.utils import timezone
 
 # Create your views here.
 def home(request):
-    return render(request, "todo_app/main_page.html")
+    tasks = TodoTask.objects.filter(is_done=False).order_by('id')
+
+    context = {
+        'tasks' : tasks
+    }
+
+    return render(request, "todo_app/main_page.html", context)
+
+def task_details(request, tid):
+    return HttpResponse(f"WORK? T_ID:{tid}")
 
 def new_task(request):
     form = TodoTaskForm(request.POST or None)
