@@ -15,7 +15,15 @@ def home(request):
     return render(request, "todo_app/main_page.html", context)
 
 def task_details(request, tid):
-    return HttpResponse(f"WORK? T_ID:{tid}")
+
+    task = TodoTask.objects.filter(id = tid)
+
+
+    context = {
+        'task' : task[0]
+    }
+
+    return render(request, "todo_app/task_details.html", context)
 
 def new_task(request):
     form = TodoTaskForm(request.POST or None)

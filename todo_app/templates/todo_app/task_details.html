@@ -1,0 +1,34 @@
+{% extends "todo_app/layouts/layout.html" %}
+
+{% block title %}
+    Details:
+{% endblock %}
+
+{% block content %}
+
+    <div class="content-list">
+        <p class="limited-p">
+            <span class="detail-strong">Title:</span>
+            {{ task.title }}
+        </p>
+        <p class="limited-p">
+            <span class="detail-strong">Created At:</span>
+            {{ task.created_at }}
+        </p>
+        <p class="limited-p">
+            <span class="detail-strong">Is Priority:</span>
+            {{ task.is_priority }}
+        </p>
+        <p class="limited-p">
+            <span class="detail-strong">Description:</span>
+            {{ task.details }}
+        </p>
+
+
+        <div class="btn-to-right-side">
+            <a class="list-item-btn btn-add-new" href="{% url 'home' %}">Back</a>
+        </div>
+
+    </div>
+
+{% endblock %}
