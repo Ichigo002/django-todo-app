@@ -1,3 +1,4 @@
 {
-    "css.styleSheets": ["todo_app/static/todo_app/*.css"]
+    "css.styleSheets": ["todo_app/static/todo_app/*.css"],
+    "docker.executablePath": "/usr/bin/docker"
   }
